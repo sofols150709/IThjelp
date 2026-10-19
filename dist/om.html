@@ -1,11 +1,100 @@
 <!doctype html>
 <html lang="no">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mal — Om</title><link rel="stylesheet" href="styles.css">
-</head>
-<body><div class="shell">
-  <header><a class="brand" href="index.html">Navn</a><nav aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="arbeid.html">Arbeid</a><a href="om.html" aria-current="page">Om</a><a href="kontakt.html">Kontakt</a></nav></header>
-  <main><section class="page-head"><p class="eyebrow">Kort fortalt</p><h1>Om</h1></section><section class="content"><p>Skriv en kort introduksjon her. Fortell hvem du er, hva du gjør, eller hva nettsiden skal handle om.</p><p>Dette avsnittet kan brukes til litt mer bakgrunn. Fjern det gjerne hvis du vil ha siden enda tommere.</p></section></main>
-  <footer><span>© 2026 Navn</span><span>Et sted, Norge</span></footer>
-</div></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Les om Librar-IT og hvordan vi gjør IT enklere og tryggere for nybegynnere."
+    />
+    <title>Om</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <a class="brand" href="index.html">Librar-IT</a>
+        <nav aria-label="Hovedmeny">
+          <a href="index.html">Hjem</a>
+          <a href="oppskrifter.html">Oppskrifter</a>
+          <a href="om.html" aria-current="page">Om</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </header>
+
+      <main class="about-simple">
+        <section class="page-head about-simple__head">
+          <p class="eyebrow">Om Librar-IT</p>
+          <h1>IT-hjelp uten vanskelige ord.</h1>
+          <p class="intro">
+            Librar-IT er laget for deg som vil forstå teknologien du bruker hver
+            dag. Her får du rolige forklaringer, tydelige steg og hjelp til å
+            komme videre på egen hånd.
+          </p>
+        </section>
+
+        <section class="about-simple__intro" aria-labelledby="why-title">
+          <div class="about-simple__image">
+            <img
+              src="assets/it-help-desk.png"
+              alt="Illustrasjon av en datamaskin, ruter og utstyr for IT-hjelp"
+            />
+          </div>
+          <div class="about-simple__text">
+            <p class="eyebrow">Hvorfor vi finnes</p>
+            <h2 id="why-title">Teknologi skal føles mulig</h2>
+            <p>
+              Små IT-problemer kan fort bli store når forklaringene er fulle av
+              faguttrykk. Målet vårt er å senke terskelen: ett problem, én
+              forklaring og ett steg om gangen.
+            </p>
+            <p>
+              Innholdet passer særlig for nybegynnere, men også for alle som
+              ønsker en rask påminnelse. Forklaringene tar utgangspunkt i
+              vanlige enheter og situasjoner du møter hjemme, på skolen eller på
+              jobb.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="about-simple__principles"
+          aria-labelledby="principles-title"
+        >
+          <div>
+            <p class="eyebrow">Slik jobber vi</p>
+            <h2 id="principles-title">Forklart for mennesker</h2>
+          </div>
+          <ol class="principle-list">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Klart språk</h3>
+                <p>Vi forklarer fagord når de må brukes.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Trygge steg</h3>
+                <p>Du får vite hva som skjer før du klikker.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Rett på sak</h3>
+                <p>Innholdet fokuserer på det du faktisk trenger.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </main>
+
+      <footer>
+        <span>&copy; 2026 Librar-IT</span>
+        <span>Enklere IT, steg for steg</span>
+      </footer>
+    </div>
+  </body>
+</html>

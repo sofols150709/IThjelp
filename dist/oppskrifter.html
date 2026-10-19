@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oppskrifter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <a class="brand" href="index.html">Librar-IT</a>
+        <nav aria-label="Hovedmeny">
+          <a href="index.html">Hjem</a>
+          <a href="oppskrifter.html" aria-current="page">Oppskrifter</a>
+          <a href="om.html">Om</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </header>
+
+      <main class="recipes-page">
+        <section class="page-head recipes-head">
+          <p class="eyebrow">IT-hjelp steg for steg</p>
+          <h1>Oppskrifter</h1>
+          <p class="intro">
+            Velg problemet du trenger hjelp med, og følg stegene i oppskriften.
+          </p>
+        </section>
+
+        <section class="recipe-list recipe-grid">
+          <article class="recipe-tile recipe-card" data-recipe="recipe-01" tabindex="0" role="button" aria-haspopup="dialog">
+            <img class="recipe-card__image" src="assets/pc-vil-ikke-starte.png" alt="Bærbar PC med frakoblet ladekabel" />
+            <span class="recipe-card__number">01</span>
+            <strong>PC-en vil ikke starte</strong>
+          </article>
+          <article class="recipe-tile recipe-card" data-recipe="recipe-02" tabindex="0" role="button" aria-haspopup="dialog">
+            <img class="recipe-card__image" src="assets/pc-uten-internett.png" alt="Bærbar PC med brutt Wi-Fi-signal" />
+            <span class="recipe-card__number">02</span>
+            <strong>PC-en får ikke internett</strong>
+          </article>
+          <article class="recipe-tile recipe-card" data-recipe="recipe-03" tabindex="0" role="button" aria-haspopup="dialog">
+            <img class="recipe-card__image" src="assets/ekstern-skjerm-uten-bilde.png" alt="Bærbar PC koblet til en ekstern skjerm uten bilde" />
+            <span class="recipe-card__number">03</span>
+            <strong>Ekstern skjerm viser ikke bilde</strong>
+          </article>
+        </section>
+
+        <dialog class="recipe-dialog" id="recipe-dialog" aria-labelledby="dialog-title">
+          <div class="recipe-dialog__top">
+            <h2 id="dialog-title">Oppskrift</h2>
+            <button class="recipe-dialog__close" type="button" aria-label="Lukk oppskriften">Lukk</button>
+          </div>
+          <div id="dialog-content"></div>
+        </dialog>
+
+        <template id="recipe-01">
+          <article class="recipe-content">
+            <h2>PC-en vil ikke starte</h2>
+            <dl>
+              <div>
+                <dt>Vanskelighetsgrad</dt>
+                <dd>Nybegynner</dd>
+              </div>
+              <div>
+                <dt>Tidsbruk</dt>
+                <dd>5–15 minutter (pluss eventuell ladetid)</dd>
+              </div>
+            </dl>
+            <p>
+              Trykker du på strømknappen uten at PC-en reagerer? Det betyr ikke
+              nødvendigvis at den er ødelagt. Følg disse stegene for å finne ut
+              hva som kan være problemet.
+            </p>
+
+            <section>
+              <h3>Steg 1 – Kontroller laderen</h3>
+              <p>
+                Sjekk at laderen sitter ordentlig i både PC-en og stikkontakten.
+                Hvis PC-en har et ladelys, se om det lyser. Prøv gjerne en annen
+                stikkontakt dersom du ikke får noen reaksjon.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Hvis batteriet er tomt og PC-en ikke får strøm fra laderen, kan
+                den ikke starte.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 2 – La PC-en lade</h3>
+              <p>
+                La PC-en stå tilkoblet laderen i 15–30 minutter. Prøv deretter å
+                starte den igjen.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Et helt utladet batteri kan trenge litt tid før PC-en reagerer.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 3 – Se etter tegn til liv</h3>
+              <p>
+                Trykk på strømknappen og undersøk om du ser lys, hører vifter
+                eller merker at skjermen reagerer.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Hvis PC-en viser tegn til oppstart, men skjermen fortsatt er
+                svart, kan problemet være knyttet til skjermen i stedet.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 4 – Utfør en strømtilbakestilling</h3>
+              <p>
+                På enkelte PC-er kan du koble fra laderen og eksternt utstyr,
+                holde strømknappen inne i 15–30 sekunder og deretter koble til
+                laderen igjen. Sjekk produsentens instruksjoner for din modell
+                før du gjør dette.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Strømstyringen kan noen ganger slutte å reagere. En
+                strømtilbakestilling kan hjelpe.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 5 – Undersøk reset-hullet</h3>
+              <p>
+                Enkelte bærbare PC-er har et lite «emergency reset»-hull på
+                undersiden. Kontroller i produsentens bruksanvisning om PC-en din
+                har dette, og følg fremgangsmåten som beskrives der.
+              </p>
+              <p>
+                <strong>Viktig:</strong> Ikke stikk noe inn i et hull uten å være
+                sikker på hva det brukes til.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                På støttede modeller kan reset-knappen tilbakestille
+                strømstyringen uten å slette personlige filer.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 6 – Kontakt IT-brukerstøtte</h3>
+              <p>
+                Hvis PC-en fortsatt ikke starter, bør du kontakte
+                IT-brukerstøtte. Fortell hvilke steg du har prøvd og om PC-en
+                viser noen tegn til liv.
+              </p>
+            </section>
+
+            <section>
+              <h3>Du har lært</h3>
+              <p>
+                Hvordan undersøke vanlige oppstartsproblemer og skille mellom
+                problemer med strøm og skjerm.
+              </p>
+            </section>
+          </article>
+        </template>
+
+        <template id="recipe-02">
+          <article class="recipe-content">
+            <h2>PC-en får ikke internett</h2>
+            <dl>
+              <div>
+                <dt>Vanskelighetsgrad</dt>
+                <dd>Nybegynner</dd>
+              </div>
+              <div>
+                <dt>Tidsbruk</dt>
+                <dd>5–10 minutter</dd>
+              </div>
+            </dl>
+            <p>
+              Er du koblet til Wi-Fi, men får ikke åpnet nettsider? Eller finner
+              PC-en ikke nettverket i det hele tatt? Denne oppskriften hjelper
+              deg med å finne ut hvor problemet ligger.
+            </p>
+
+            <section>
+              <h3>Steg 1 – Kontroller Wi-Fi</h3>
+              <p>
+                Klikk på nettverksikonet på oppgavelinjen. Kontroller at Wi-Fi
+                er aktivert, og at flymodus er slått av. Velg riktig nettverk og
+                prøv å koble til.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                PC-en må ha en aktiv nettverkstilkobling for å få tilgang til
+                internett.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 2 – Undersøk tilkoblingsstatus</h3>
+              <p>
+                Åpne <strong>Innstillinger → Nettverk og Internett</strong>. Se
+                om PC-en er tilkoblet, eller om Windows viser en feilmelding.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                En PC kan være koblet til et trådløst nettverk uten at
+                nettverket har internettilgang.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 3 – Test andre nettsider</h3>
+              <p>
+                Prøv å åpne flere forskjellige nettsider. Hvis bare én nettside
+                ikke fungerer, kan feilen ligge hos nettsiden.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Dette hjelper deg med å finne ut om problemet gjelder hele
+                internettforbindelsen eller bare én tjeneste.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 4 – Test en annen enhet</h3>
+              <p>
+                Prøv å koble telefonen til det samme Wi-Fi-nettverket og åpne
+                en nettside.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Hvis flere enheter har samme problem, kan feilen ligge i
+                nettverket. Hvis bare PC-en har problemer, bør du undersøke
+                PC-ens innstillinger.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 5 – Start nettverkstilkoblingen på nytt</h3>
+              <p>
+                Koble fra Wi-Fi-nettverket, vent noen sekunder og koble til
+                igjen. Hvis det ikke hjelper, kan du starte PC-en på nytt.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Dette kan løse midlertidige feil i nettverkstilkoblingen.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 6 – Kontakt IT-brukerstøtte</h3>
+              <p>
+                Hvis problemet fortsetter, kontakt IT-brukerstøtte. Oppgi
+                hvilket nettverk du bruker, hvilken feilmelding du får og hvilke
+                steg du har prøvd.
+              </p>
+              <p>
+                På skolens nettverk bør du ikke tilbakestille eller endre
+                nettverksutstyr uten tillatelse.
+              </p>
+            </section>
+
+            <section>
+              <h3>Du har lært</h3>
+              <p>
+                Hvordan kontrollere Wi-Fi og undersøke om en nettverksfeil
+                ligger hos PC-en, nettverket eller en bestemt nettside.
+              </p>
+            </section>
+          </article>
+        </template>
+
+        <template id="recipe-03">
+          <article class="recipe-content">
+            <h2>Ekstern skjerm viser ikke bilde</h2>
+            <dl>
+              <div>
+                <dt>Vanskelighetsgrad</dt>
+                <dd>Nybegynner</dd>
+              </div>
+              <div>
+                <dt>Tidsbruk</dt>
+                <dd>3–5 minutter</dd>
+              </div>
+            </dl>
+            <p>
+              Har du koblet en ekstra skjerm til PC-en, men får bare svart
+              skjerm eller meldingen «No Signal»? Følg denne oppskriften for å
+              finne problemet.
+            </p>
+
+            <section>
+              <h3>Steg 1 – Kontroller at skjermen er på</h3>
+              <p>
+                Undersøk om skjermen er koblet til strøm og slått på. Se etter
+                et indikatorlys på skjermen.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>En skjerm må ha strøm for å kunne vise bilde.</p>
+            </section>
+
+            <section>
+              <h3>Steg 2 – Kontroller skjermkabelen</h3>
+              <p>
+                Sjekk at HDMI-, DisplayPort- eller USB-C-kabelen sitter ordentlig
+                i både PC-en og skjermen. Hvis du bruker en dockingstasjon,
+                kontroller også tilkoblingen mellom PC-en og dockingstasjonen.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                En løs kabel eller en tilkobling som ikke støtter videosignal,
+                kan føre til at skjermen ikke får bilde.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 3 – Velg riktig inngang</h3>
+              <p>
+                Åpne skjermens meny ved hjelp av knappene på skjermen. Finn
+                innstillingen «Input» eller «Source», og velg inngangen kabelen
+                er koblet til, for eksempel HDMI 1.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Skjermen kan være satt til å vise signal fra en annen inngang.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 4 – Bruk Windows + P</h3>
+              <p>
+                Trykk på <strong>Windows-tasten + P</strong> på tastaturet. Velg
+                «Dupliser» hvis du vil vise samme bilde på begge skjermene,
+                eller «Utvid» hvis du vil bruke dem som to separate
+                arbeidsområder.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>Windows kan være innstilt til å bruke bare én av skjermene.</p>
+            </section>
+
+            <section>
+              <h3>Steg 5 – Finn skjermen i Windows</h3>
+              <p>
+                Åpne <strong>Innstillinger → System → Skjerm</strong>. Se om den
+                eksterne skjermen vises. Hvis den mangler, kan du prøve
+                funksjonen for å oppdage flere skjermer, dersom den er
+                tilgjengelig.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Her kan du kontrollere hvordan Windows registrerer og bruker de
+                tilkoblede skjermene.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 6 – Test en annen tilkobling</h3>
+              <p>
+                Hvis skjermen fortsatt ikke fungerer, prøv en annen kompatibel
+                kabel, port eller skjerm dersom du har tilgang til det.
+              </p>
+              <h4>Hvorfor?</h4>
+              <p>
+                Ved å bytte én ting om gangen kan du finne ut om feilen ligger i
+                kabelen, skjermen eller PC-en.
+              </p>
+            </section>
+
+            <section>
+              <h3>Steg 7 – Kontakt IT-brukerstøtte</h3>
+              <p>
+                Hvis du fortsatt ikke får bilde, kontakt IT-brukerstøtte.
+                Forklar hvilke kabler og tilkoblinger du har testet.
+              </p>
+            </section>
+
+            <section>
+              <h3>Du har lært</h3>
+              <p>
+                Hvordan feilsøke eksterne skjermer og bruke Windows til å
+                konfigurere flere skjermer.
+              </p>
+            </section>
+          </article>
+        </template>
+      </main>
+
+      <footer>
+        <span>&copy; 2026 Librar-IT</span>
+        <span>Enklere IT, steg for steg</span>
+      </footer>
+    </div>
+    <script>
+      const recipeDialog = document.querySelector("#recipe-dialog");
+      const dialogContent = document.querySelector("#dialog-content");
+      const dialogTitle = document.querySelector("#dialog-title");
+
+      function openRecipe(card) {
+        const recipeTemplate = document.querySelector(`#${card.dataset.recipe}`);
+        const recipeName = card.querySelector("strong").textContent;
+
+        dialogContent.replaceChildren(recipeTemplate.content.cloneNode(true));
+        dialogTitle.textContent = recipeName;
+        recipeDialog.showModal();
+        recipeDialog.scrollTop = 0;
+      }
+
+      document.querySelectorAll("[data-recipe]").forEach((card) => {
+        card.addEventListener("click", () => openRecipe(card));
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openRecipe(card);
+          }
+        });
+      });
+
+      document.querySelector(".recipe-dialog__close").addEventListener("click", () => {
+        recipeDialog.close();
+      });
+
+      recipeDialog.addEventListener("click", (event) => {
+        if (event.target === recipeDialog) recipeDialog.close();
+      });
+    </script>
+  </body>
+</html>
