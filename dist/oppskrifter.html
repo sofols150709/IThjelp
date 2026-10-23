@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Oppskrifter</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="oppskrifter.css" />
   </head>
   <body>
     <div class="shell">
@@ -28,27 +28,67 @@
         </section>
 
         <section class="recipe-list recipe-grid">
-          <article class="recipe-tile recipe-card" data-recipe="recipe-01" tabindex="0" role="button" aria-haspopup="dialog">
-            <img class="recipe-card__image" src="assets/pc-vil-ikke-starte.png" alt="Bærbar PC med frakoblet ladekabel" />
+          <article
+            class="recipe-tile recipe-card"
+            data-recipe="recipe-01"
+            tabindex="0"
+            role="button"
+            aria-haspopup="dialog"
+          >
+            <img
+              class="recipe-card__image"
+              src="assets/pc-vil-ikke-starte.png"
+              alt="Bærbar PC med frakoblet ladekabel"
+            />
             <span class="recipe-card__number">01</span>
             <strong>PC-en vil ikke starte</strong>
           </article>
-          <article class="recipe-tile recipe-card" data-recipe="recipe-02" tabindex="0" role="button" aria-haspopup="dialog">
-            <img class="recipe-card__image" src="assets/pc-uten-internett.png" alt="Bærbar PC med brutt Wi-Fi-signal" />
+          <article
+            class="recipe-tile recipe-card"
+            data-recipe="recipe-02"
+            tabindex="0"
+            role="button"
+            aria-haspopup="dialog"
+          >
+            <img
+              class="recipe-card__image"
+              src="assets/pc-uten-internett.png"
+              alt="Bærbar PC med brutt Wi-Fi-signal"
+            />
             <span class="recipe-card__number">02</span>
             <strong>PC-en får ikke internett</strong>
           </article>
-          <article class="recipe-tile recipe-card" data-recipe="recipe-03" tabindex="0" role="button" aria-haspopup="dialog">
-            <img class="recipe-card__image" src="assets/ekstern-skjerm-uten-bilde.png" alt="Bærbar PC koblet til en ekstern skjerm uten bilde" />
+          <article
+            class="recipe-tile recipe-card"
+            data-recipe="recipe-03"
+            tabindex="0"
+            role="button"
+            aria-haspopup="dialog"
+          >
+            <img
+              class="recipe-card__image"
+              src="assets/ekstern-skjerm-uten-bilde.png"
+              alt="Bærbar PC koblet til en ekstern skjerm uten bilde"
+            />
             <span class="recipe-card__number">03</span>
             <strong>Ekstern skjerm viser ikke bilde</strong>
           </article>
         </section>
 
-        <dialog class="recipe-dialog" id="recipe-dialog" aria-labelledby="dialog-title">
+        <dialog
+          class="recipe-dialog"
+          id="recipe-dialog"
+          aria-labelledby="dialog-title"
+        >
           <div class="recipe-dialog__top">
             <h2 id="dialog-title">Oppskrift</h2>
-            <button class="recipe-dialog__close" type="button" aria-label="Lukk oppskriften">Lukk</button>
+            <button
+              class="recipe-dialog__close"
+              type="button"
+              aria-label="Lukk oppskriften"
+            >
+              Lukk
+            </button>
           </div>
           <div id="dialog-content"></div>
         </dialog>
@@ -63,7 +103,7 @@
               </div>
               <div>
                 <dt>Tidsbruk</dt>
-                <dd>5–15 minutter (pluss eventuell ladetid)</dd>
+                <dd>5 til 15 minutter (pluss eventuell ladetid)</dd>
               </div>
             </dl>
             <p>
@@ -73,7 +113,7 @@
             </p>
 
             <section>
-              <h3>Steg 1 – Kontroller laderen</h3>
+              <h3>Steg 1: Kontroller laderen</h3>
               <p>
                 Sjekk at laderen sitter ordentlig i både PC-en og stikkontakten.
                 Hvis PC-en har et ladelys, se om det lyser. Prøv gjerne en annen
@@ -87,7 +127,7 @@
             </section>
 
             <section>
-              <h3>Steg 2 – La PC-en lade</h3>
+              <h3>Steg 2: La PC-en lade</h3>
               <p>
                 La PC-en stå tilkoblet laderen i 15–30 minutter. Prøv deretter å
                 starte den igjen.
@@ -99,7 +139,7 @@
             </section>
 
             <section>
-              <h3>Steg 3 – Se etter tegn til liv</h3>
+              <h3>Steg 3: Se etter tegn til liv</h3>
               <p>
                 Trykk på strømknappen og undersøk om du ser lys, hører vifter
                 eller merker at skjermen reagerer.
@@ -112,7 +152,7 @@
             </section>
 
             <section>
-              <h3>Steg 4 – Utfør en strømtilbakestilling</h3>
+              <h3>Steg 4: Utfør en strømtilbakestilling</h3>
               <p>
                 På enkelte PC-er kan du koble fra laderen og eksternt utstyr,
                 holde strømknappen inne i 15–30 sekunder og deretter koble til
@@ -127,15 +167,15 @@
             </section>
 
             <section>
-              <h3>Steg 5 – Undersøk reset-hullet</h3>
+              <h3>Steg 5: Undersøk reset-hullet</h3>
               <p>
                 Enkelte bærbare PC-er har et lite «emergency reset»-hull på
-                undersiden. Kontroller i produsentens bruksanvisning om PC-en din
-                har dette, og følg fremgangsmåten som beskrives der.
+                undersiden. Kontroller i produsentens bruksanvisning om PC-en
+                din har dette, og følg fremgangsmåten som beskrives der.
               </p>
               <p>
-                <strong>Viktig:</strong> Ikke stikk noe inn i et hull uten å være
-                sikker på hva det brukes til.
+                <strong>Viktig:</strong> Ikke stikk noe inn i et hull uten å
+                være sikker på hva det brukes til.
               </p>
               <h4>Hvorfor?</h4>
               <p>
@@ -145,7 +185,7 @@
             </section>
 
             <section>
-              <h3>Steg 6 – Kontakt IT-brukerstøtte</h3>
+              <h3>Steg 6: Kontakt IT-brukerstøtte</h3>
               <p>
                 Hvis PC-en fortsatt ikke starter, bør du kontakte
                 IT-brukerstøtte. Fortell hvilke steg du har prøvd og om PC-en
@@ -173,7 +213,7 @@
               </div>
               <div>
                 <dt>Tidsbruk</dt>
-                <dd>5–10 minutter</dd>
+                <dd>5 til 10 minutter</dd>
               </div>
             </dl>
             <p>
@@ -183,7 +223,7 @@
             </p>
 
             <section>
-              <h3>Steg 1 – Kontroller Wi-Fi</h3>
+              <h3>Steg 1: Kontroller Wi-Fi</h3>
               <p>
                 Klikk på nettverksikonet på oppgavelinjen. Kontroller at Wi-Fi
                 er aktivert, og at flymodus er slått av. Velg riktig nettverk og
@@ -197,7 +237,7 @@
             </section>
 
             <section>
-              <h3>Steg 2 – Undersøk tilkoblingsstatus</h3>
+              <h3>Steg 2: Undersøk tilkoblingsstatus</h3>
               <p>
                 Åpne <strong>Innstillinger → Nettverk og Internett</strong>. Se
                 om PC-en er tilkoblet, eller om Windows viser en feilmelding.
@@ -210,7 +250,7 @@
             </section>
 
             <section>
-              <h3>Steg 3 – Test andre nettsider</h3>
+              <h3>Steg 3: Test andre nettsider</h3>
               <p>
                 Prøv å åpne flere forskjellige nettsider. Hvis bare én nettside
                 ikke fungerer, kan feilen ligge hos nettsiden.
@@ -223,10 +263,10 @@
             </section>
 
             <section>
-              <h3>Steg 4 – Test en annen enhet</h3>
+              <h3>Steg 4: Test en annen enhet</h3>
               <p>
-                Prøv å koble telefonen til det samme Wi-Fi-nettverket og åpne
-                en nettside.
+                Prøv å koble telefonen til det samme Wi-Fi-nettverket og åpne en
+                nettside.
               </p>
               <h4>Hvorfor?</h4>
               <p>
@@ -237,19 +277,17 @@
             </section>
 
             <section>
-              <h3>Steg 5 – Start nettverkstilkoblingen på nytt</h3>
+              <h3>Steg 5: Start nettverkstilkoblingen på nytt</h3>
               <p>
                 Koble fra Wi-Fi-nettverket, vent noen sekunder og koble til
                 igjen. Hvis det ikke hjelper, kan du starte PC-en på nytt.
               </p>
               <h4>Hvorfor?</h4>
-              <p>
-                Dette kan løse midlertidige feil i nettverkstilkoblingen.
-              </p>
+              <p>Dette kan løse midlertidige feil i nettverkstilkoblingen.</p>
             </section>
 
             <section>
-              <h3>Steg 6 – Kontakt IT-brukerstøtte</h3>
+              <h3>Steg 6: Kontakt IT-brukerstøtte</h3>
               <p>
                 Hvis problemet fortsetter, kontakt IT-brukerstøtte. Oppgi
                 hvilket nettverk du bruker, hvilken feilmelding du får og hvilke
@@ -281,7 +319,7 @@
               </div>
               <div>
                 <dt>Tidsbruk</dt>
-                <dd>3–5 minutter</dd>
+                <dd>3 til 5 minutter</dd>
               </div>
             </dl>
             <p>
@@ -291,7 +329,7 @@
             </p>
 
             <section>
-              <h3>Steg 1 – Kontroller at skjermen er på</h3>
+              <h3>Steg 1: Kontroller at skjermen er på</h3>
               <p>
                 Undersøk om skjermen er koblet til strøm og slått på. Se etter
                 et indikatorlys på skjermen.
@@ -301,11 +339,12 @@
             </section>
 
             <section>
-              <h3>Steg 2 – Kontroller skjermkabelen</h3>
+              <h3>Steg 2: Kontroller skjermkabelen</h3>
               <p>
-                Sjekk at HDMI-, DisplayPort- eller USB-C-kabelen sitter ordentlig
-                i både PC-en og skjermen. Hvis du bruker en dockingstasjon,
-                kontroller også tilkoblingen mellom PC-en og dockingstasjonen.
+                Sjekk at HDMI-, DisplayPort- eller USB-C-kabelen sitter
+                ordentlig i både PC-en og skjermen. Hvis du bruker en
+                dockingstasjon, kontroller også tilkoblingen mellom PC-en og
+                dockingstasjonen.
               </p>
               <h4>Hvorfor?</h4>
               <p>
@@ -315,7 +354,7 @@
             </section>
 
             <section>
-              <h3>Steg 3 – Velg riktig inngang</h3>
+              <h3>Steg 3: Velg riktig inngang</h3>
               <p>
                 Åpne skjermens meny ved hjelp av knappene på skjermen. Finn
                 innstillingen «Input» eller «Source», og velg inngangen kabelen
@@ -328,7 +367,7 @@
             </section>
 
             <section>
-              <h3>Steg 4 – Bruk Windows + P</h3>
+              <h3>Steg 4: Bruk Windows + P</h3>
               <p>
                 Trykk på <strong>Windows-tasten + P</strong> på tastaturet. Velg
                 «Dupliser» hvis du vil vise samme bilde på begge skjermene,
@@ -340,7 +379,7 @@
             </section>
 
             <section>
-              <h3>Steg 5 – Finn skjermen i Windows</h3>
+              <h3>Steg 5: Finn skjermen i Windows</h3>
               <p>
                 Åpne <strong>Innstillinger → System → Skjerm</strong>. Se om den
                 eksterne skjermen vises. Hvis den mangler, kan du prøve
@@ -397,7 +436,9 @@
       const dialogTitle = document.querySelector("#dialog-title");
 
       function openRecipe(card) {
-        const recipeTemplate = document.querySelector(`#${card.dataset.recipe}`);
+        const recipeTemplate = document.querySelector(
+          `#${card.dataset.recipe}`,
+        );
         const recipeName = card.querySelector("strong").textContent;
 
         dialogContent.replaceChildren(recipeTemplate.content.cloneNode(true));
@@ -416,9 +457,11 @@
         });
       });
 
-      document.querySelector(".recipe-dialog__close").addEventListener("click", () => {
-        recipeDialog.close();
-      });
+      document
+        .querySelector(".recipe-dialog__close")
+        .addEventListener("click", () => {
+          recipeDialog.close();
+        });
 
       recipeDialog.addEventListener("click", (event) => {
         if (event.target === recipeDialog) recipeDialog.close();
