@@ -443,8 +443,59 @@
 
         dialogContent.replaceChildren(recipeTemplate.content.cloneNode(true));
         dialogTitle.textContent = recipeName;
+        prepareChecklist();
         recipeDialog.showModal();
         recipeDialog.scrollTop = 0;
+      }
+
+      function prepareChecklist() {
+        const recipe = dialogContent.querySelector(".recipe-content");
+        const sections = [...recipe.querySelectorAll("section")].filter(
+          (section) => !section.querySelector("h3")?.textContent.includes("Du har"),
+        );
+
+        const progress = document.createElement("div");
+        progress.className = "recipe-progress";
+        progress.setAttribute("aria-live", "polite");
+        progress.innerHTML = `
+          <div class="recipe-progress__text">
+            <strong>Din fremdrift</strong>
+            <span>0 av ${sections.length} steg fullført</span>
+          </div>
+          <div class="recipe-progress__bar" aria-hidden="true">
+            <span></span>
+          </div>
+        `;
+
+        const firstSection = recipe.querySelector("section");
+        recipe.insertBefore(progress, firstSection);
+
+        sections.forEach((section, index) => {
+          const heading = section.querySelector("h3");
+          const checkboxId = `recipe-step-${index + 1}`;
+          const label = document.createElement("label");
+          label.className = "recipe-step__check";
+          label.setAttribute("for", checkboxId);
+
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = checkboxId;
+          checkbox.setAttribute("aria-label", `Marker ${heading.textContent} som fullført`);
+
+          heading.before(label);
+          label.append(checkbox, heading);
+
+          checkbox.addEventListener("change", () => {
+            section.classList.toggle("is-complete", checkbox.checked);
+            const completed = sections.filter(
+              (item) => item.querySelector('input[type="checkbox"]').checked,
+            ).length;
+            progress.querySelector(".recipe-progress__text span").textContent =
+              `${completed} av ${sections.length} steg fullført`;
+            progress.querySelector(".recipe-progress__bar span").style.width =
+              `${(completed / sections.length) * 100}%`;
+          });
+        });
       }
 
       document.querySelectorAll("[data-recipe]").forEach((card) => {

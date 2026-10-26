@@ -725,3 +725,44 @@ footer {
   }
 }
 
+/* Forbedret oppskriftsvisning */
+.recipes-page { padding-bottom: 40px; }
+.recipes-head { position: relative; padding-bottom: 64px; }
+.recipes-head::after { content: "Velg en guide under"; position: absolute; right: 0; bottom: 18px; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.recipe-grid { gap: 24px; }
+.recipe-card { position: relative; overflow: hidden; border-color: transparent; box-shadow: 0 14px 40px rgba(11, 17, 24, 0.08); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.recipe-card::after { content: "Åpne oppskrift  →"; margin-top: 20px; color: var(--accent); font-size: 0.82rem; font-weight: 700; }
+.recipe-card:hover, .recipe-card:focus-visible { transform: translateY(-7px); border-color: var(--sky-strong); box-shadow: 0 22px 55px rgba(11, 17, 24, 0.14); outline: none; }
+.recipe-card__image { transition: transform 0.35s ease; }
+.recipe-card:hover .recipe-card__image { transform: scale(1.025); }
+.recipe-dialog { border: 0; border-radius: 24px; box-shadow: 0 30px 90px rgba(11, 17, 24, 0.3); }
+.recipe-dialog__top { position: sticky; top: -32px; z-index: 5; margin: -32px -32px 0; padding: 20px 32px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(14px); }
+.recipe-dialog__close { border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink); cursor: pointer; font-weight: 700; }
+.recipe-dialog__close:hover { border-color: var(--ink); }
+.recipe-content { margin: 0 auto; }
+.recipe-content > h2 { max-width: 680px; margin-top: 14px; }
+.recipe-content dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 30px 0; }
+.recipe-content dl > div { padding: 18px 20px; border-radius: 14px; background: var(--sky); }
+.recipe-content dt { margin-bottom: 5px; color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.recipe-content dd { margin: 0; font-weight: 700; }
+.recipe-progress { margin: 42px 0 18px; padding: 20px; border-radius: 16px; background: var(--ink); color: #fff; }
+.recipe-progress__text { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 14px; font-size: 0.86rem; }
+.recipe-progress__text span { color: #c8d2db; }
+.recipe-progress__bar { height: 7px; overflow: hidden; border-radius: 999px; background: rgba(255, 255, 255, 0.18); }
+.recipe-progress__bar span { display: block; width: 0; height: 100%; border-radius: inherit; background: #74cdfd; transition: width 0.25s ease; }
+.recipe-content section { margin-top: 14px; padding: 26px 28px; border: 1px solid var(--line); border-radius: 18px; transition: border-color 0.2s ease, background 0.2s ease; }
+.recipe-content section:first-of-type { margin-top: 14px; }
+.recipe-content section.is-complete { border-color: #8bd0b0; background: #f1fbf6; }
+.recipe-step__check { display: flex; align-items: flex-start; gap: 14px; cursor: pointer; }
+.recipe-step__check input { width: 24px; height: 24px; margin: 1px 0 0; flex: 0 0 auto; accent-color: var(--accent); cursor: pointer; }
+.recipe-step__check h3 { margin: 0 0 14px; font-size: 1.22rem; }
+.recipe-content section.is-complete h3 { color: #287552; }
+.recipe-content h4 { display: inline-block; margin: 10px 0 0; padding: 5px 9px; border-radius: 7px; background: var(--sky); color: var(--accent); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; }
+@media (max-width: 680px) {
+  .recipes-head::after { display: none; }
+  .recipe-dialog__top { top: -20px; margin: -20px -20px 0; padding: 16px 20px; }
+  .recipe-content dl { grid-template-columns: 1fr; }
+  .recipe-content section { padding: 22px 18px; }
+  .recipe-progress__text { display: block; }
+  .recipe-progress__text span { display: block; margin-top: 4px; }
+}

@@ -525,6 +525,37 @@ h1 {
 .contact-intro h1 {
   font-size: clamp(4rem, 9vw, 7.8rem);
 }
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 13px 18px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.contact-email::before {
+  content: "@";
+  color: #85d2ff;
+}
+.contact-email:hover,
+.contact-email:focus-visible {
+  transform: translateY(-2px);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.contact-email:focus-visible {
+  outline: 3px solid var(--sky-strong);
+  outline-offset: 3px;
+}
 .contact-card {
   min-height: 430px;
   padding: 36px;
