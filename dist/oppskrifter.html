@@ -451,7 +451,8 @@
       function prepareChecklist() {
         const recipe = dialogContent.querySelector(".recipe-content");
         const sections = [...recipe.querySelectorAll("section")].filter(
-          (section) => !section.querySelector("h3")?.textContent.includes("Du har"),
+          (section) =>
+            !section.querySelector("h3")?.textContent.includes("Du har"),
         );
 
         const progress = document.createElement("div");
@@ -480,7 +481,10 @@
           const checkbox = document.createElement("input");
           checkbox.type = "checkbox";
           checkbox.id = checkboxId;
-          checkbox.setAttribute("aria-label", `Marker ${heading.textContent} som fullført`);
+          checkbox.setAttribute(
+            "aria-label",
+            `Marker ${heading.textContent} som fullført`,
+          );
 
           heading.before(label);
           label.append(checkbox, heading);
